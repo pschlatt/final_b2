@@ -1,0 +1,9 @@
+<h1>All Courses</h1>
+
+<% @courses.each do |course| %>
+  <%= course.name %>: 
+            <% course.get_students.each do |student| %>
+              <%= student.name %> - <%= student.grade %>%
+            <% end %>
+  <br>
+<% end %>

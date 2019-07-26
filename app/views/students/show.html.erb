@@ -1,0 +1,7 @@
+<h1>Student: <%= @student.name %></h1>
+<h4>GPA: <%= @student.average_grade.round(2) %>%</h4>
+<h3>Classes:</h3>
+<% @courses.each do |course| %>
+  <%= course.name %>: <%= course.grade %>%
+  <br>
+<% end %>
